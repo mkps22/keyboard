@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0PX;
+           
+            outline: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: rgb(34, 123, 130);
+        }
+        #dis{
+            width: 80%;
+            height: 20vh;
+            background-color: rgb(228, 228, 228);
+            font-size: 30px;
+           margin-left: 10%;
+           border: 5px groove white;
+           font-family: Arial, Helvetica, sans-serif;
+           
+            
+        }
+        .key{
+            width: 85%;
+            height: 60vh;
+            background-color: rgb(22, 39, 23);
+            border: 10px groove black;
+            display: grid;
+            grid-template-columns: 1FR 1fr  1FR 1FR  1FR 1fr  1FR 1fr  1FR 1fr  1FR 1fr  1FR 1fr;
+        gap: 5px;
+        border: 5PX groove black;
+        margin-left: 7%;
+        margin-top: 1%;
+        
+            
+
+        }
+        #cap{
+            grid-column: 1/3;
+        }
+        #shi{
+            grid-column: 1/3;
+        }
+        #sh{
+            grid-column: 14/15;
+            grid-row: 5/7;
+        }
+        #spac{
+            grid-column: 5/9;
+        }
+        .dos{
+            margin-left: 7px;
+            color: white;
+            font-size: 10px;
+            
+            
+        }
+        button{
+            box-shadow: 0PX 0PX 3PX 5PX rgb(182, 182, 182);
+            font-size: 16px;
+            border: 3px groove rgb(231, 230, 230);
+        }
+</style>
+</head>
+<body>
+    <textarea id="dis"></textarea>
+    <div class="key">
+        <button>esc</button>
+        <button>F1</button>
+        <button>F2</button>
+        <button>F3</button>
+        <button>F4</button>
+        <button>F5</button>
+        <button>F6</button>
+        <button>7</button>
+        <button>F8</button>
+        <button>F9</button>
+        <button>F10</button>
+        <BUtton><i class="fa-solid fa-volume-xmark"></i></BUtton>
+        <BUtton><i class="fa-solid fa-volume-high"></i></BUtton>
+        <BUtton><i class="fa-solid fa-volume-low"></i></BUtton>
+        <button onclick="fun('~')">~</button>
+        <button onclick="fun('1')">1</button>
+        <button onclick="fun('2')">2</button>
+        <button onclick="fun('3')">3</button>
+        <button onclick="fun('4')">4</button>
+        <button onclick="fun('5')">5</button>
+        <button onclick="fun('6')">6</button>
+        <button onclick="fun('7')">7</button>
+        <button onclick="fun('8')">8</button>
+        <button onclick="fun('9')">9</button>
+        <button onclick="fun('0')">0</button>
+        <button onclick="fun('-')">-</button>
+        <button onclick="fun('+')">+</button>
+        <button id="del" onclick="bk('del')">delete</button>
+        <button onclick="fun5('    ')">tab</button>
+        <button onclick="fun('q')">Q</button>
+        <button onclick="fun('w')">W</button> 
+        <BUtton onclick="fun('e')">E</BUtton>       
+        <BUtton onclick="fun('r')">R</BUtton>  
+        <BUtton onclick="fun('t')">T</BUtton>
+        <BUtton onclick="fun('y')">Y</BUtton>
+        <BUtton onclick="fun('u')">U</BUtton>
+        <BUtton onclick="fun('i')">I</BUtton>
+        <BUtton onclick="fun('o')">O</BUtton>
+        <BUTton onclick="fun('p')">P</BUTton>
+        <BUTton onclick="fun('{')">{</BUTton>
+        <BUtton onclick="fun('}')">}</BUtton>
+        <BUTton onclick="fun('|')">\</BUTton>
+        <BUtton id="cap">caps lock  <i class="dos fa-solid fa-circle"></i></BUtton>
+        <BUTton onclick="fun('a')">A</BUTton>
+        <BUtton onclick="fun('s')">S</BUtton>
+        <BUTton onclick="fun('d')">D</BUTton>
+        <BUTton onclick="fun('f')">F</BUTton>
+        <BUTton onclick="fun('g')">G</BUTton>
+        <BUTton onclick="fun('h')">H</BUTton>
+        <BUTton onclick="fun('j')">J</BUTton>
+        <BUTton onclick="fun('k')">K</BUTton>
+        <BUTton onclick="fun('l')">L</BUTton>
+        <BUTton onclick="fun(';')">;</BUTton>
+        <BUTton onclick="fun('=')">=</BUTton>
+        <BUTton id="ret">shift</BUTton>
+        <button id="shi">shift</button>
+        <button onclick="fun('z')">Z</button>
+        <BUTton onclick="fun('x')">X</BUTton>
+        <BUTton onclick="fun('c')">C</BUTton>
+        <BUTton onclick="fun('v')">V</BUTton>
+        <BUTton onclick="fun('b')">B</BUTton>
+        <BUTton onclick="fun('n')">N</BUTton>
+        <BUTton onclick="fun('m')">M</BUTton>
+        <BUTton onclick="fun(',')">,</BUTton>
+        <BUTton onclick="fun('.')">.</BUTton>
+        <BUTton ><i class="fa-solid fa-caret-up"></i></BUTton>
+        <button onclick="fun('?')">?</button>
+        <BUTton id="sh" onclick="fun6('\n')">return</BUTton>
+        <button>fn</button>
+        <button>control</button>
+        <button>option</button>
+        <button>cmd</button>
+        <button id="spac" onclick="fun4(' ')"></button>
+        <button>cmd</button>
+        <button>option</button>
+        <button><i class="fa-solid fa-caret-left"></i></button>
+        <button><i class="fa-solid fa-caret-down"></i></button>
+        <button><i class="fa-solid fa-caret-right"></i></button>
+       <script>
+            let rs=""
+            function fun(s)
+            {if(d==0){
+                rs=rs+s
+                document.getElementById("dis").value=rs}
+                else{
+                    rs=rs+s.toUpperCase()
+                document.getElementById("dis").value=rs
+                }
+            }
+            let  d=0
+            let dok=document.getElementById("cap")
+            let dots=document.getElementsByClassName("dos")
+            dok.addEventListener("click",function(){
+                if(d==0){
+                dots[0].style.color="#7AFF33"
+                d=1
+                }
+               else{
+                dots[0].style.color="white"
+                d=0
+                }
+                })
+               function fun4(e)
+            {
+                rs=rs+e
+                document.getElementById("dis").value=rs
+            }
+
+            function fun5(a)
+            {
+                rs=rs+a
+                document.getElementById("dis").value=rs
+            }
+            function fun6(g)
+            {
+                rs=rs+g
+                document.getElementById("dis").value=rs
+            }
+            function bk(){
+                rs=rs.slice(0,rs.length-1)
+                document.getElementById("dis").value=rs
+            }
+           </script>
+    </div>
+</body>
+</html>
